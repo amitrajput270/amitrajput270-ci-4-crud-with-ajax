@@ -1,0 +1,509 @@
+CRITICAL - 2024-03-28 03:43:42 --> Error: Class 'App\Controllers\ConfigServices' not found
+in APPPATH/Controllers/PostController.php on line 28.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\PostController->add()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 03:44:38 --> Error: Class 'App\Controllers\ConfigServices' not found
+in APPPATH/Controllers/PostController.php on line 28.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\PostController->add()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 03:49:05 --> Error: Class 'App\Controllers\AppModelsPostModel' not found
+in APPPATH/Controllers/PostController.php on line 50.
+ 1 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\PostController->fetch()
+ 2 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 3 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 03:49:40 --> CodeIgniter\Database\Exceptions\DataException: Allowed fields must be specified for model: "App\Models\PostModel"
+in SYSTEMPATH/Model.php on line 766.
+ 1 SYSTEMPATH/Model.php(766): CodeIgniter\Database\Exceptions\DataException::forInvalidAllowedFields('App\\Models\\PostModel')
+ 2 SYSTEMPATH/BaseModel.php(783): CodeIgniter\Model->doProtectFieldsForInsert([...])
+ 3 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 4 SYSTEMPATH/BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 5 APPPATH/Controllers/PostController.php(40): CodeIgniter\BaseModel->save([...])
+ 6 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\PostController->add()
+ 7 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PostController))
+ 8 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 04:19:45 --> ErrorException: Undefined index: body
+in APPPATH/Controllers/ProductController.php on line 63.
+ 1 APPPATH/Controllers/ProductController.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: body', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 63, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-28 04:24:13 --> mysqli_sql_exception: Column 'description' cannot be null in /private/var/www/codeigniter/system/Database/MySQLi/Connection.php:306
+Stack trace:
+#0 /private/var/www/codeigniter/system/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `pr...', 0)
+#1 /private/var/www/codeigniter/system/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pr...')
+#2 /private/var/www/codeigniter/system/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pr...')
+#3 /private/var/www/codeigniter/system/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pr...', Array, false)
+#4 /private/var/www/codeigniter/system/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+#5 /private/var/www/codeigniter/system/BaseModel.php(802): CodeIgniter\Model->doInsert(Array)
+#6 /private/var/www/codeigniter/system/Model.php(744): CodeIgniter\BaseModel->insert(Array, false)
+#7 /private/var/www/codeigniter/system/BaseModel.php(713): CodeIgniter\Model->insert(Array, false)
+#8 /private/var/www/codeigniter/app/Controllers/ProductController.php(39): CodeIgniter\BaseModel->save(Array)
+#9 /private/var/www/codeigniter/system/CodeIgniter.php(941): App\Controllers\ProductController->add()
+#10 /private/var/www/codeigniter/system/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+#11 /private/var/www/codeigniter/system/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 /private/var/www/codeigniter/public/index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2024-03-28 04:24:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'description' cannot be null
+in SYSTEMPATH/Database/BaseConnection.php on line 647.
+ 1 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `products` (`title`, `category`, `description`, `image`, `created_at`) VALUES (:title:, :category:, :description:, :image:, :created_at:)', [...], false)
+ 2 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH/BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 6 APPPATH/Controllers/ProductController.php(39): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 04:24:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'description' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 311.
+ 1 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `products` (`title`, `category`, `description`, `image`, `created_at`) VALUES (\'xs\', \'xs\', NULL, \'1711599853_bf21d4ca29ebdbb64806.jpeg\', \'2024-03-28 04:24:13\')')
+ 2 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `products` (`title`, `category`, `description`, `image`, `created_at`) VALUES (\'xs\', \'xs\', NULL, \'1711599853_bf21d4ca29ebdbb64806.jpeg\', \'2024-03-28 04:24:13\')')
+ 3 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `products` (`title`, `category`, `description`, `image`, `created_at`) VALUES (:title:, :category:, :description:, :image:, :created_at:)', [...], false)
+ 4 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 7 SYSTEMPATH/BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 8 APPPATH/Controllers/ProductController.php(39): CodeIgniter\BaseModel->save([...])
+ 9 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+10 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+11 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 04:24:13 --> [Caused by] mysqli_sql_exception: Column 'description' cannot be null
+in SYSTEMPATH/Database/MySQLi/Connection.php on line 306.
+ 1 SYSTEMPATH/Database/MySQLi/Connection.php(306): mysqli->query('INSERT INTO `products` (`title`, `category`, `description`, `image`, `created_at`) VALUES (\'xs\', \'xs\', NULL, \'1711599853_bf21d4ca29ebdbb64806.jpeg\', \'2024-03-28 04:24:13\')', 0)
+ 2 SYSTEMPATH/Database/BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `products` (`title`, `category`, `description`, `image`, `created_at`) VALUES (\'xs\', \'xs\', NULL, \'1711599853_bf21d4ca29ebdbb64806.jpeg\', \'2024-03-28 04:24:13\')')
+ 3 SYSTEMPATH/Database/BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `products` (`title`, `category`, `description`, `image`, `created_at`) VALUES (\'xs\', \'xs\', NULL, \'1711599853_bf21d4ca29ebdbb64806.jpeg\', \'2024-03-28 04:24:13\')')
+ 4 SYSTEMPATH/Database/BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `products` (`title`, `category`, `description`, `image`, `created_at`) VALUES (:title:, :category:, :description:, :image:, :created_at:)', [...], false)
+ 5 SYSTEMPATH/Model.php(326): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH/BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH/Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH/BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH/Controllers/ProductController.php(39): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+11 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+12 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 05:16:23 --> Error: Call to a member function helper() on null
+in APPPATH/Models/Products.php on line 46.
+ 1 APPPATH/Controllers/ProductController.php(47): App\Models\Products->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 05:16:23 --> Error: Call to a member function helper() on null
+in APPPATH/Models/Products.php on line 46.
+ 1 APPPATH/Controllers/ProductController.php(47): App\Models\Products->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 05:16:24 --> Error: Call to a member function helper() on null
+in APPPATH/Models/Products.php on line 46.
+ 1 APPPATH/Controllers/ProductController.php(47): App\Models\Products->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 05:22:01 --> Error: Call to undefined function App\Models\read_file()
+in APPPATH/Models/Products.php on line 51.
+ 1 APPPATH/Controllers/ProductController.php(38): App\Models\Products->create_item([...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 05:23:46 --> Error: Call to undefined function App\Models\read_file()
+in APPPATH/Models/Products.php on line 54.
+ 1 APPPATH/Controllers/ProductController.php(38): App\Models\Products->create_item([...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 05:27:01 --> ErrorException: file_get_contents(products.txt): failed to open stream: No such file or directory
+in APPPATH/Models/Products.php on line 54.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(products.txt): failed to open stream: No such file or directory', '/private/var/www/codeigniter/app/Models/Products.php', 54, [...])
+ 2 APPPATH/Models/Products.php(54): file_get_contents('products.txt')
+ 3 APPPATH/Controllers/ProductController.php(38): App\Models\Products->create_item([...])
+ 4 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 5 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 6 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 05:27:31 --> Error: Call to undefined function App\Models\write_file()
+in APPPATH/Models/Products.php on line 56.
+ 1 APPPATH/Controllers/ProductController.php(38): App\Models\Products->create_item([...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 05:27:54 --> Error: Call to undefined function App\Models\write_file()
+in APPPATH/Models/Products.php on line 56.
+ 1 APPPATH/Controllers/ProductController.php(38): App\Models\Products->create_item([...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 05:33:18 --> Error: Call to undefined function App\Models\read_file()
+in APPPATH/Models/Products.php on line 59.
+ 1 APPPATH/Controllers/ProductController.php(38): App\Models\Products->create_item([...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 05:33:26 --> Error: Call to undefined function App\Models\read_file()
+in APPPATH/Models/Products.php on line 59.
+ 1 APPPATH/Controllers/ProductController.php(38): App\Models\Products->create_item([...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 05:38:31 --> ParseError: syntax error, unexpected '?', expecting variable (T_VARIABLE)
+in SYSTEMPATH/Helpers/filesystem_helper.php on line 221.
+ 1 SYSTEMPATH/Debug/Toolbar.php(376): helper([...])
+ 2 SYSTEMPATH/Filters/DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH/Filters/Filters.php(211): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+ 4 SYSTEMPATH/CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('product', 'after')
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 05:41:01 --> ParseError: syntax error, unexpected '?', expecting variable (T_VARIABLE)
+in SYSTEMPATH/Helpers/filesystem_helper.php on line 201.
+ 1 SYSTEMPATH/Debug/Toolbar.php(376): helper([...])
+ 2 SYSTEMPATH/Filters/DebugToolbar.php(42): CodeIgniter\Debug\Toolbar->prepare(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response))
+ 3 SYSTEMPATH/Filters/Filters.php(211): CodeIgniter\Filters\DebugToolbar->after(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), null)
+ 4 SYSTEMPATH/CodeIgniter.php(522): CodeIgniter\Filters\Filters->run('product', 'after')
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:09:32 --> ParseError: syntax error, unexpected '{'
+in APPPATH/Models/Products.php on line 63.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/private/var/www/codeigniter/app/Models/Products.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Products')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Products')
+ 4 APPPATH/Controllers/ProductController.php(48): spl_autoload_call('App\\Models\\Products')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:10:33 --> ErrorException: Undefined index: id
+in APPPATH/Models/Products.php on line 65.
+ 1 APPPATH/Models/Products.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/private/var/www/codeigniter/app/Models/Products.php', 65, [...])
+ 2 APPPATH/Controllers/ProductController.php(38): App\Models\Products->create_item([...])
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:20:15 --> ErrorException: Undefined index: id
+in APPPATH/Models/Products.php on line 65.
+ 1 APPPATH/Models/Products.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/private/var/www/codeigniter/app/Models/Products.php', 65, [...])
+ 2 APPPATH/Controllers/ProductController.php(38): App\Models\Products->create_item([...])
+ 3 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 4 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 5 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:23:56 --> ErrorException: Undefined index: id
+in APPPATH/Models/Products.php on line 68.
+ 1 APPPATH/Models/Products.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/private/var/www/codeigniter/app/Models/Products.php', 68, [...])
+ 2 [internal function]: App\Models\Products->App\Models\{closure}([...], [...])
+ 3 APPPATH/Models/Products.php(69): usort([...], Object(Closure))
+ 4 APPPATH/Controllers/ProductController.php(38): App\Models\Products->create_item([...])
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:23:57 --> ErrorException: Undefined index: id
+in APPPATH/Models/Products.php on line 68.
+ 1 APPPATH/Models/Products.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/private/var/www/codeigniter/app/Models/Products.php', 68, [...])
+ 2 [internal function]: App\Models\Products->App\Models\{closure}([...], [...])
+ 3 APPPATH/Models/Products.php(69): usort([...], Object(Closure))
+ 4 APPPATH/Controllers/ProductController.php(38): App\Models\Products->create_item([...])
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:24:00 --> ErrorException: Undefined index: id
+in APPPATH/Models/Products.php on line 68.
+ 1 APPPATH/Models/Products.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/private/var/www/codeigniter/app/Models/Products.php', 68, [...])
+ 2 [internal function]: App\Models\Products->App\Models\{closure}([...], [...])
+ 3 APPPATH/Models/Products.php(69): usort([...], Object(Closure))
+ 4 APPPATH/Controllers/ProductController.php(38): App\Models\Products->create_item([...])
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:24:33 --> ErrorException: Undefined index: id
+in APPPATH/Models/Products.php on line 69.
+ 1 APPPATH/Models/Products.php(69): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/private/var/www/codeigniter/app/Models/Products.php', 69, [...])
+ 2 [internal function]: App\Models\Products->App\Models\{closure}([...], [...])
+ 3 APPPATH/Models/Products.php(70): usort([...], Object(Closure))
+ 4 APPPATH/Controllers/ProductController.php(38): App\Models\Products->create_item([...])
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:30:20 --> ErrorException: Undefined variable: data
+in APPPATH/Controllers/ProductController.php on line 53.
+ 1 APPPATH/Controllers/ProductController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 53, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:30:53 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH/Controllers/ProductController.php on line 136.
+ 1 APPPATH/Controllers/ProductController.php(136): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 136, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->delete('3')
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:33:13 --> ErrorException: Undefined index: id
+in APPPATH/Controllers/ProductController.php on line 57.
+ 1 APPPATH/Controllers/ProductController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 57, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:33:44 --> ErrorException: Undefined index: id
+in APPPATH/Controllers/ProductController.php on line 57.
+ 1 APPPATH/Controllers/ProductController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 57, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:33:48 --> ErrorException: Undefined index: id
+in APPPATH/Controllers/ProductController.php on line 57.
+ 1 APPPATH/Controllers/ProductController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 57, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:33:48 --> ErrorException: Undefined index: id
+in APPPATH/Controllers/ProductController.php on line 57.
+ 1 APPPATH/Controllers/ProductController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 57, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:34:08 --> ErrorException: Undefined index: id
+in APPPATH/Controllers/ProductController.php on line 57.
+ 1 APPPATH/Controllers/ProductController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 57, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:34:47 --> ErrorException: Undefined index: created_at
+in APPPATH/Controllers/ProductController.php on line 68.
+ 1 APPPATH/Controllers/ProductController.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: created_at', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 68, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:34:48 --> ErrorException: Undefined index: created_at
+in APPPATH/Controllers/ProductController.php on line 68.
+ 1 APPPATH/Controllers/ProductController.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: created_at', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 68, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:38:41 --> ErrorException: Undefined index: id
+in APPPATH/Controllers/ProductController.php on line 57.
+ 1 APPPATH/Controllers/ProductController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 57, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:39:19 --> ErrorException: Undefined index: id
+in APPPATH/Controllers/ProductController.php on line 57.
+ 1 APPPATH/Controllers/ProductController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 57, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:39:21 --> ErrorException: Undefined index: id
+in APPPATH/Controllers/ProductController.php on line 57.
+ 1 APPPATH/Controllers/ProductController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: id', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 57, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:46:14 --> ErrorException: Undefined index: created_at
+in APPPATH/Controllers/ProductController.php on line 68.
+ 1 APPPATH/Controllers/ProductController.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: created_at', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 68, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:46:22 --> ErrorException: Undefined index: created_at
+in APPPATH/Controllers/ProductController.php on line 68.
+ 1 APPPATH/Controllers/ProductController.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: created_at', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 68, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:47:09 --> ErrorException: Undefined index: created_at
+in APPPATH/Controllers/ProductController.php on line 68.
+ 1 APPPATH/Controllers/ProductController.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: created_at', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 68, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:47:54 --> ErrorException: Undefined index: created_at
+in APPPATH/Controllers/ProductController.php on line 68.
+ 1 APPPATH/Controllers/ProductController.php(68): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: created_at', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 68, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:48:50 --> ParseError: syntax error, unexpected '$data' (T_VARIABLE)
+in APPPATH/Models/Products.php on line 110.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/private/var/www/codeigniter/app/Models/Products.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Products')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Products')
+ 4 APPPATH/Controllers/ProductController.php(48): spl_autoload_call('App\\Models\\Products')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:53:49 --> BadMethodCallException: Call to undefined method App\Models\Products::create_item
+in SYSTEMPATH/Model.php on line 874.
+ 1 APPPATH/Controllers/ProductController.php(38): CodeIgniter\Model->__call('create_item', [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->add()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:54:48 --> ParseError: syntax error, unexpected ''updated_at'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+in APPPATH/Models/Products.php on line 81.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/private/var/www/codeigniter/app/Models/Products.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Products')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Products')
+ 4 APPPATH/Controllers/ProductController.php(48): spl_autoload_call('App\\Models\\Products')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 06:58:46 --> ParseError: syntax error, unexpected 'if' (T_IF)
+in APPPATH/Models/Products.php on line 130.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/private/var/www/codeigniter/app/Models/Products.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Products')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Products')
+ 4 APPPATH/Controllers/ProductController.php(48): spl_autoload_call('App\\Models\\Products')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 07:03:00 --> ParseError: syntax error, unexpected '$postModel' (T_VARIABLE)
+in APPPATH/Controllers/ProductController.php on line 136.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/private/var/www/codeigniter/app/Controllers/ProductController.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ProductController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ProductController')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\ProductController')
+ 5 SYSTEMPATH/CodeIgniter.php(899): class_exists('\\App\\Controllers\\ProductController', true)
+ 6 SYSTEMPATH/CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 07:37:12 --> ErrorException: Undefined variable: posts
+in APPPATH/Controllers/ProductController.php on line 63.
+ 1 APPPATH/Controllers/ProductController.php(63): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: posts', '/private/var/www/codeigniter/app/Controllers/ProductController.php', 63, [...])
+ 2 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 3 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 4 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 07:37:32 --> ErrorException: Declaration of App\Models\Products::findAll() should be compatible with CodeIgniter\BaseModel::findAll(int $limit = 0, int $offset = 0)
+in APPPATH/Models/Products.php on line 43.
+ 1 APPPATH/Models/Products.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Declaration of App\\Models\\Products::findAll() should be compatible with CodeIgniter\\BaseModel::findAll(int $limit = 0, int $offset = 0)', '/private/var/www/codeigniter/app/Models/Products.php', 43, [...])
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(311): include_once('/private/var/www/codeigniter/app/Models/Products.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/private/var/www/codeigniter/app/Models/Products.php')
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Products')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Products')
+ 6 APPPATH/Controllers/ProductController.php(58): spl_autoload_call('App\\Models\\Products')
+ 7 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 07:37:36 --> ErrorException: Declaration of App\Models\Products::findAll() should be compatible with CodeIgniter\BaseModel::findAll(int $limit = 0, int $offset = 0)
+in APPPATH/Models/Products.php on line 43.
+ 1 APPPATH/Models/Products.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Declaration of App\\Models\\Products::findAll() should be compatible with CodeIgniter\\BaseModel::findAll(int $limit = 0, int $offset = 0)', '/private/var/www/codeigniter/app/Models/Products.php', 43, [...])
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(311): include_once('/private/var/www/codeigniter/app/Models/Products.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/private/var/www/codeigniter/app/Models/Products.php')
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Products')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Products')
+ 6 APPPATH/Controllers/ProductController.php(58): spl_autoload_call('App\\Models\\Products')
+ 7 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 07:37:46 --> ErrorException: Declaration of App\Models\Products::findAll() should be compatible with CodeIgniter\BaseModel::findAll(int $limit = 0, int $offset = 0)
+in APPPATH/Models/Products.php on line 43.
+ 1 APPPATH/Models/Products.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Declaration of App\\Models\\Products::findAll() should be compatible with CodeIgniter\\BaseModel::findAll(int $limit = 0, int $offset = 0)', '/private/var/www/codeigniter/app/Models/Products.php', 43, [...])
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(311): include_once('/private/var/www/codeigniter/app/Models/Products.php')
+ 3 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/private/var/www/codeigniter/app/Models/Products.php')
+ 4 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Products')
+ 5 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Products')
+ 6 APPPATH/Controllers/ProductController.php(58): spl_autoload_call('App\\Models\\Products')
+ 7 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 8 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 9 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 07:40:00 --> ParseError: syntax error, unexpected ';'
+in APPPATH/Models/Products.php on line 29.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/private/var/www/codeigniter/app/Models/Products.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Products')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Products')
+ 4 APPPATH/Controllers/ProductController.php(58): spl_autoload_call('App\\Models\\Products')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 07:40:37 --> ParseError: syntax error, unexpected ';'
+in APPPATH/Models/Products.php on line 40.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/private/var/www/codeigniter/app/Models/Products.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Products')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Products')
+ 4 APPPATH/Controllers/ProductController.php(58): spl_autoload_call('App\\Models\\Products')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 07:40:58 --> ParseError: syntax error, unexpected ';'
+in APPPATH/Models/Products.php on line 48.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/private/var/www/codeigniter/app/Models/Products.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Products')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Products')
+ 4 APPPATH/Controllers/ProductController.php(58): spl_autoload_call('App\\Models\\Products')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 07:41:24 --> ParseError: syntax error, unexpected ';'
+in APPPATH/Models/Products.php on line 72.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/private/var/www/codeigniter/app/Models/Products.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Products')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Products')
+ 4 APPPATH/Controllers/ProductController.php(58): spl_autoload_call('App\\Models\\Products')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 07:41:34 --> ParseError: syntax error, unexpected ';'
+in APPPATH/Models/Products.php on line 82.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/private/var/www/codeigniter/app/Models/Products.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Products')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Products')
+ 4 APPPATH/Controllers/ProductController.php(58): spl_autoload_call('App\\Models\\Products')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-28 07:41:49 --> ParseError: syntax error, unexpected ';'
+in APPPATH/Models/Products.php on line 103.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('/private/var/www/codeigniter/app/Models/Products.php')
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\Products')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\Products')
+ 4 APPPATH/Controllers/ProductController.php(58): spl_autoload_call('App\\Models\\Products')
+ 5 SYSTEMPATH/CodeIgniter.php(941): App\Controllers\ProductController->fetch()
+ 6 SYSTEMPATH/CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProductController))
+ 7 SYSTEMPATH/CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH/index.php(79): CodeIgniter\CodeIgniter->run()
