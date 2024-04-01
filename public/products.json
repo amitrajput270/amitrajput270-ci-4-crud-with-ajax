@@ -9,12 +9,13 @@
         "updated_at": "2024-04-01 04:23:10"
     },
     {
-        "id": 3,
+        "id": "3",
         "title": "xsxs",
         "category": "xsxs",
-        "description": "xsxs",
-        "image": "1711640259_5070e34dcfb38e4a1d23.jpeg",
-        "created_at": "2024-03-28 15:37:39"
+        "description": "xsxsxsxsxss",
+        "image": "1711947434_b14136ae5af9e299b6f9.png",
+        "created_at": "2024-03-28 15:37:39",
+        "updated_at": "2024-04-01 04:57:14"
     },
     {
         "id": 4,
