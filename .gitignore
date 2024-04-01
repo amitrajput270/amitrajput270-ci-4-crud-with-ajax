@@ -7,3 +7,5 @@
 /public/uploads/*
 /public/products.json
 public/products.json
+/writable/cache/*
+/writable/logs/*
