@@ -1,2 +1,8 @@
 
 .DS_Store
+.env
+.env.local
+/writable/debugbar/*
+/public/storage/*
+/public/uploads/*
+/public/products.json
